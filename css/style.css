@@ -1,0 +1,94 @@
+html{
+    height: 100%;
+}
+body{
+    background-color: black;
+    height: 100%;
+}
+.header{
+    background: url('../img/background-planet.jpg') no-repeat fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.nav{
+    position: absolute;
+    width: 50%;
+    background-color: rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 5px;
+    left: 25%;
+    top: 45%;
+}
+.main{
+    height: 400%;
+    width: 100%;
+    background: -moz-linear-gradient(top, rgb(235, 244, 66) 0%, rgb(62, 144, 216) 75%);
+}
+.main__section{
+    width: 100%;
+    height: 25%;
+}
+.main__section-contact{
+    background: url('../img/background-space-earth.jpg') no-repeat fixed;
+    background-size: cover;
+}
+.nav__ul{
+    color: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.nav__ul li{
+    display: block;
+    float: left;
+    width: 25%;
+    margin: 0;
+}
+.nav__ul a{
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    height: 25px;
+    width: 100%;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.nav__ul a:hover{
+    background-color: white;
+    background-color: rgba(0,0,0,0.8);
+}
+.nav__ul a:focus{
+    background-color: rgba(0,0,0,0.8);
+    outline: none;
+}
+@keyframes fade-in {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+.header__heading{
+    animation-name: fade-in;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.5s;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5px;
+}
+.header__sub-title{
+    animation-name: fade-in;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.5s;
+    margin-top: 5px;
+    color: white;
+    text-align: center;
+}
+.footer{
+    height: 100%;
+    color: white;
+    background-color: rgb(215, 224, 46);
+    background: -moz-linear-gradient(top, black 0%, rgb(50,50,50) 50%, rgb(62, 144, 216) 200%);
+}
