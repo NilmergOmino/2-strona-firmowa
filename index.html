@@ -16,7 +16,7 @@
 </head>
 <body>
     <header class="header">
-        <a href="index.html" class="header__link"><img class="header__logo" src="img/logo.png" alt="Space Travels"></a>
+        <a href="index.html" class="header__link-logo"><img class="header__logo" src="img/logo.png" alt="Space Travels"></a>
         <h1 class="header__heading"><a href="index.html" class="header__link">Space Travels</a></h1>
         <p class="header__sub-title">Polska turystyka kosmiczna</p>
     </header>
@@ -28,12 +28,45 @@
             <li><a href="#o-nas">Kontakt</a></li>
         </ul>
     </nav>
+
     <main class="main">
         <section class="main__section main__section-about" id="o-nas">
-            <h2>Kim jesteśmy?</h2>
-            <p></p>
+            <h2 class="main__heading main__heading-about">O nas</h2>
+            <article class="main__article">
+                <h3 class="main__heading-article">Kim jesteśmy?</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in hendrerit lorem. In odio augue, vestibulum at quam in, condimentum scelerisque sem. Quisque massa nisi, pulvinar in laoreet id, elementum sed nisl. Maecenas convallis mauris eget nulla imperdiet efficitur. Pellentesque scelerisque orci id elit cursus volutpat. Nullam lorem metus, rutrum quis faucibus sed, sollicitudin nec lectus. Phasellus gravida vehicula lobortis. </p>
+            </article>
+            <article class="main__article">
+                <h3 class="main__heading-article">Nasze najważniejsze dokonania</h3>
+                <p>Maecenas id sem vitae enim venenatis semper. Sed eros neque, ullamcorper non pharetra vitae, faucibus ac sapien. Donec ac est enim. Suspendisse porttitor sapien a risus lobortis, eu sodales metus suscipit. Mauris cursus tempor massa, in molestie velit dapibus vel. Duis semper scelerisque neque, et commodo mi porttitor blandit. Duis euismod, velit ac efficitur consectetur, nunc ex tristique nulla, eu efficitur felis lorem efficitur ipsum. Mauris in dignissim massa. Donec fermentum eu justo vel mollis. </p>
+            </article>
+            <article class="main__article">
+                <h3 class="main__heading-article">Nasze ambicje</h3>
+                <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer mollis, libero quis bibendum laoreet, velit ex semper elit, ut aliquam orci lorem at nulla. Suspendisse cursus mi ac orci commodo auctor. Morbi in faucibus nulla. Fusce mattis lorem arcu, sed efficitur elit luctus vel. Etiam eleifend odio non erat dictum, et porta nunc ultrices. Fusce eu leo eget massa tristique ultricies a ut eros. Praesent a luctus dolor.</p>
+            </article>
+            <footer class="main__footer">
+                <ul class="main__social-media-list">
+                    <li><a class="main__link main__favicon" href="#"><span class="icon-facebook" aria-label="facebook"></span></a></li>
+                    <li><a class="main__link main__favicon" href="#"><span class="icon-youtube" aria-label="youtube"></span></a></li>
+                    <li><a class="main__link main__favicon" href="#"><span class="icon-twitter" aria-label="twitter"></span></a></li>
+                </ul>
+            </footer>
         </section>
         <section class="main__section main__section-travels" id="podroze">
+            <header class="main__header-travel">
+                <h2 class="main__heading main__heading-travels">Nasza oferta podróży kosmicznych</h2>
+                <p>Wszystkie podróże odbywają się w obrębie układu słonecznego.</p>
+            </header>
+            <article class="main__travel-article">
+                <figure class="main__travel-figure">
+                    <img src="img/moon.png" class="main__image-sphare" alt="księżyc">
+                </figure>
+                <div class="main__travel-description">
+                    <h3 class="main__heading-travel-description">Spacer po księżycu</h3>
+                    <p>Phasellus at neque eleifend, fermentum purus at, convallis lectus. Etiam diam diam, tincidunt venenatis leo congue, rutrum faucibus ex. Donec nisl lacus, dapibus nec eros vitae, convallis interdum justo. Nulla cursus neque vitae aliquam lobortis. Integer in leo in nisi interdum gravida. Nullam commodo eget mauris et ultrices. Nulla dui neque, aliquam non quam eu, tincidunt rutrum eros. </p>
+                    <a href="#">czytaj więcej</a>
+                </div>
+            </article>
         </section>
         <section class="main__section main__section-questions" id="pytania-i-odpowiedzi">
         </section>

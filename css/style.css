@@ -2,7 +2,6 @@ html{
     height: 100%;
 }
 body{
-    background-color: black;
     height: 100%;
 }
 .header{
@@ -21,14 +20,27 @@ body{
     top: 45%;
 }
 .main{
-    height: 400%;
+    height: 500%;
     width: 100%;
-    background: -moz-linear-gradient(top, rgb(235, 244, 66) 0%, rgb(62, 144, 216) 75%);
+    /*background: -moz-linear-gradient(top, rgb(100, 11, 122) 0%, rgb(46, 129, 211) 75%);*/
 }
 .main__section{
     width: 100%;
-    height: 25%;
+    height: 20%;
+    text-align: center;
 }
+
+.main__section-about{
+    background-color: rgb(190, 203, 219);
+}
+.main__section-travels{
+    height: 40%;
+    background-color: rgb(62, 144, 216);
+}
+.main__section-questions{
+    background-color: rgb(190, 203, 219);
+}
+
 .main__section-contact{
     background: url('../img/background-space-earth.jpg') no-repeat fixed;
     background-size: cover;
@@ -69,14 +81,15 @@ body{
     100%{opacity: 1;}
 }
 .header__heading{
+    margin-top: 0;
     animation-name: fade-in;
     animation-timing-function: ease-in-out;
     animation-duration: 1.5s;
     color: white;
     text-transform: uppercase;
     text-align: center;
-    margin-top: 5%;
     margin-bottom: 5px;
+    padding-top: 5%;
 }
 .header__link{
     text-decoration: none;
@@ -97,6 +110,12 @@ body{
     color: white;
     text-align: center;
 }
+.header__link-logo{
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
 .header__logo{
     height: 80px;
     position: fixed;
@@ -105,14 +124,94 @@ body{
     transition: 0.3s;
 }
 .header__logo:hover{
-    transform: scale(1.1,1.1);
+    transform: scale(1.1,1.1) rotate(-45deg);
 }
-.header__link:focus .header__logo{
-    transform: scale(1.1,1.1);
+.header__link-logo:focus .header__logo{
+    transform: scale(1.1,1.1) rotate(-45deg);
 }
 .footer{
     height: 100%;
     color: white;
     background-color: rgb(215, 224, 46);
-    background: -moz-linear-gradient(top, black 0%, rgb(50,50,50) 50%, rgb(62, 144, 216) 200%);
+    background-color: black;
+}
+.main__heading{
+    margin: 0;
+    padding-top: 4%;
+    margin-bottom: 2%;
+    text-align: center;
+    font-size: 2.5em;
+}
+.main__heading-about{
+    color: rgb(32, 114, 186);
+}
+.main__heading-article{
+    text-align: center;
+}
+.main__article{
+    box-shadow: 2px 2px 5px black;
+    border: 1px solid rgb(32, 114, 186);
+    vertical-align: top;
+    text-align: justify;
+    width: 24%;
+    margin-right: 1%;
+    display: inline-block;
+    padding: 1%;
+    color: rgba(0,0,0,0.7);
+    background-color: rgba(62, 144, 216, 0.9);
+}
+.main__footer{
+    margin-top: 5%;
+    color: rgba(32, 114, 186,0.9);
+}
+.main__social-media-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.main__social-media-list li{
+    display: inline-block;
+}
+.main__favicon{
+    color: rgb(32, 114, 186);
+    font-size: 2em;
+    margin: 20px;
+    transition: 0.2s;
+}
+.main__favicon:hover{
+    color: rgb(204, 2, 28);
+    border-bottom: 1px solid rgb(204, 2, 28);
+}
+.main__favicon:focus{
+    color: rgb(204, 2, 28);
+    border-bottom: 1px solid rgb(204, 2, 28);
+    outline: none;
+}
+.main__header-travel{
+    margin-bottom: 5%;
+}
+.main__travel-article{
+    height: 18%;
+    margin: 0 auto;
+    margin-top: 2%;
+    width: 50%;
+    text-align: justify;
+}
+.main__travel-figure{
+    float: left;
+    margin: 0;
+    height: 100%;
+    width: 50%;
+}
+.main__image-sphare{
+    height: 100%;
+    float: left;
+}
+.main__travel-description{
+    float: right;
+    height: 100%;
+    width: 50%;
+}
+.main__heading-travel-description{
+    margin-top: 0;
 }
