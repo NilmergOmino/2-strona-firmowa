@@ -53,16 +53,16 @@ body{
     display: block;
     height: 25px;
     width: 100%;
-    border-radius: 5px;
     transition: 0.3s;
 }
 .nav__ul a:hover{
+    outline: 2px solid white;
     background-color: white;
     background-color: rgba(0,0,0,0.8);
 }
 .nav__ul a:focus{
+    outline: 2px solid white;
     background-color: rgba(0,0,0,0.8);
-    outline: none;
 }
 @keyframes fade-in {
     0%{opacity: 0;}
@@ -78,6 +78,17 @@ body{
     margin-top: 5%;
     margin-bottom: 5px;
 }
+.header__link{
+    text-decoration: none;
+    color: white;
+}
+.header__link:hover{
+    text-decoration: underline;
+}
+.header__link:focus{
+    text-decoration: underline;
+    outline: none;
+}
 .header__sub-title{
     animation-name: fade-in;
     animation-timing-function: ease-in-out;
@@ -85,6 +96,19 @@ body{
     margin-top: 5px;
     color: white;
     text-align: center;
+}
+.header__logo{
+    height: 80px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    transition: 0.3s;
+}
+.header__logo:hover{
+    transform: scale(1.1,1.1);
+}
+.header__link:focus .header__logo{
+    transform: scale(1.1,1.1);
 }
 .footer{
     height: 100%;
