@@ -266,8 +266,8 @@ body{
 .main__list-question-element{
     padding-left: 5%;
     display: block;
-    height: 20px;
     padding-top: 5px;
+    padding-bottom: 5px;
     width: 80%;
     background-color: rgba(62, 144, 216, 0.9);
     border: 1px solid rgba(52, 134, 206, 0.9);
@@ -286,14 +286,21 @@ body{
     outline: none;
 }
 .main__question-article{
+    color: rgba(0,0,0,0.9);
+    animation: fade-in;
+    animation-duration: 1s;
     display: inline-block;
     text-align: justify;
     width: 30%;
-    background-color: red;
 }
 .main__question-article_hidden{
     display: none;
 }
+.main__heading-questions{
+    margin-bottom: 5%;
+    color: rgba(0,0,0,0.9);
+}
 .main__heading-question-article{
     text-align: center;
+    margin-top: 0;
 }
