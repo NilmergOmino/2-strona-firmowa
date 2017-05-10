@@ -275,7 +275,7 @@ body{
     transition: 0.2s;
     cursor: pointer;
 }
-.main__list-question-element[aria-pressed="true"]{
+.main__list-question-element_active{
     margin-left: 5%;
 }
 .main__list-question-element:hover{

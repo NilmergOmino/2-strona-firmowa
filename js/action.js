@@ -13,7 +13,7 @@ window.addEventListener('load', function(){
             element.setAttribute("aria-expanded", "true");
             element.classList.add('main__list-question-element_active');
             for (var j = 0; j < listButtons.length; j++) {
-                if (listButtons[j].getAttribute("aria-pressed") === element.getAttribute("aria-pressed") ) {
+                if (listButtons[j] === element ) {
                     articleVisible[0].classList.toggle('main__question-article_hidden');
                     articleVisible[0].classList.toggle('main__question-article_visible');
                     articles[j].classList.toggle('main__question-article_hidden');
