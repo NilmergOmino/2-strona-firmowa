@@ -10,18 +10,18 @@ window.addEventListener('load', function(){
             var scroll = function(){
                 if(pageYOffset < upto) var step = Math.floor((upto - pageYOffset)*4/100);
                 else if(pageYOffset > upto) var step = Math.floor((pageYOffset - upto)*4/100);
-                if (step < 3) step = 3;
+                if (step < 1) step = 1;
                 if (from < upto) {
                     window.scrollBy(0, step);
                     from += step;
                     window.requestAnimationFrame(scroll);
                 }
-                else if(from > upto+1) {
+                else if(from > upto) {
                     window.scrollBy(0, -step);
                     from -= step;
                     window.requestAnimationFrame(scroll);
                 }
-                if(from <= upto +10 && from >= upto-10 ){
+                if(from == upto){
                     location.hash = anchor;
                 }
             }
