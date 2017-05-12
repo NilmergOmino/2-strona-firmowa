@@ -29,7 +29,6 @@ window.addEventListener('load', function(){
         }
         activatedButton.onkeypress = function(event){
             if (event.keyCode === 32 || event.keyCode === 13) {
-              event.preventDefault();
               toggleButton(event.target);
             }
         }
