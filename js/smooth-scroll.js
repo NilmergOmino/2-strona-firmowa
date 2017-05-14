@@ -1,16 +1,23 @@
+//  scrollowanie odbywa się w sposób easy-in-out
+//  var speed = 2; --> szybkość scrollowania (0-1000), gdzie 0 to przesuwanie co 1px, a 1000 to natychmiastowe przeniesienie
+//  upto = target.offsetTop; --> jeżeli chcesz by obraz przesunął się ponad/poniżej kotwicy, dodaj/odejmij tu stosowną wartość (ilość pikseli). Np. by przyklejane menu nie przykryło celu to możesz odjąć wysokość menu)
+//  percentStart = 0; --> początkowa zmiana, im ta zmienna jest większa, tym większy jest pierwszy przeskok, niska wartość daje łagodniejszy start
+
 window.addEventListener('load', function(){
     var navElements = document.getElementsByClassName('nav__link');
     for(var i=0;i<navElements.length; i++){
         var navElement = navElements[i];
         navElement.onclick = function(){
-            var check = true;
-                anchor = this.hash;
+            var speed = 2;
                 target = document.getElementById(this.hash.slice(1));
                 from = pageYOffset;
                 upto = target.offsetTop;
+                percentStart = 0;
+                history.pushState(null,null,this.hash);
             var scroll = function(){
-                if(pageYOffset < upto ) var step = Math.floor((upto - pageYOffset)*6/100);
-                else if(pageYOffset > upto) var step = Math.floor((pageYOffset - upto)*6/100);
+                var step = Math.round((upto - pageYOffset)*percentStart/1000);
+                    step = Math.abs(step);
+                    percentStart += speed;
                 if (step < 1) step = 1;
                 if (from < upto) {
                     window.scrollBy(0, step);
@@ -21,10 +28,6 @@ window.addEventListener('load', function(){
                     window.scrollBy(0, -step);
                     from -= step;
                     window.requestAnimationFrame(scroll);
-                }
-                if(step < 10 && check==true){
-                    history.pushState(null,null,anchor);
-                    check = false;
                 }
             }
             window.requestAnimationFrame(scroll);
