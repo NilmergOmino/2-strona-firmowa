@@ -1,0 +1,126 @@
+@media (max-height: 530px) {
+    .main{
+        height: 600%;
+    }
+    .footer__section-info{
+        margin-bottom: 1%;
+    }
+}
+@media (max-height: 450px) {
+    .main{
+        height: 700%;
+    }
+    .footer{
+        height: 120%;
+    }
+}
+@media (max-height: 380px) {
+    .main{
+        height: 800%;
+    }
+    .footer{
+        height: 140%;
+    }
+}
+@media (max-height: 340px) {
+    .main{
+        height: 900%;
+    }
+    .footer{
+        height: 160%;
+    }
+}
+@media (max-height: 300px) {
+    .main{
+        height: 1000%;
+    }
+    .footer{
+        height: 180%;
+    }
+    .nav{
+        top: 60%;
+    }
+    .nav_sticky{
+        top: 0
+    }
+}
+@media (max-height: 270px) {
+    .main{
+        height: 1100%;
+    }
+    .footer{
+        height: 200%;
+    }
+}
+
+@media (max-width: 1350px){
+    .main__travel-article{
+        width: 55%;
+    }
+}
+@media (max-width: 950px) {
+    .main__travel-article{
+        width: 65%;
+    }
+}
+@media (max-width: 850px) {
+    .main__travel-article{
+        width: 85%;
+    }
+    .main__article{
+        width: 95%;
+        margin: 0 auto;
+        display: block;
+    }
+    .main__section-about{
+        height: 24%;
+    }
+}
+@media (max-width: 650px) {
+    .main__section-about{
+        height: 26%;
+    }
+    .main__list-question{
+        width: 48%;
+    }
+    .main__question-article{
+        width: 48%;
+    }
+    .main__travel-article{
+        width: 98%;
+        height: 22%;
+    }
+    .main__image-sphare_right{
+        height: 60%;
+        margin: 25% 25%;
+    }
+    .main__image-sphare_left{
+        height: 60%;
+        margin: 25% 25%;
+    }
+    .main__travel-figure{
+        height: 100%;
+        width: 30%;
+    }
+    .main__section-contact-container{
+        width: 90%;
+    }
+    .main__input, .main__textarea, .main__input-submit{
+        padding: 2px;
+        width: 80%;
+        box-sizing: border-box;
+    }
+     .main__textarea{
+         height: 20%;
+     }
+}
+@media (max-width: 500px) {
+    .nav{
+        width: 90%;
+        left: 5%;
+    }
+    .nav_sticky{
+        left: 0;
+        width: 100%;
+    }
+}

@@ -1,10 +1,10 @@
 // toggle artykułów w sekcji pytań i odpowiedzi
 window.addEventListener('load', function(){
     var listButtons = document.getElementsByClassName('main__list-question-element');
-    var articles = document.getElementsByClassName('main__question-article');
+        articles = document.getElementsByClassName('main__question-article');
     function toggleButton(element) {
         var activeButton = document.getElementsByClassName('main__list-question-element_active');
-        var articleVisible = document.getElementsByClassName('main__question-article_visible');
+            articleVisible = document.getElementsByClassName('main__question-article_visible');
         if (element.getAttribute("aria-pressed") === "false") {
             activeButton[0].setAttribute("aria-pressed", "false");
             activeButton[0].setAttribute("aria-expanded", "false");

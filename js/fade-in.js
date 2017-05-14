@@ -6,7 +6,7 @@ window.addEventListener('load', function(){
             element.classList.add('fade-in-animation');
         }
     }
-    var fadeElements = document.querySelectorAll('.main__article, .main__travel-article');
+    var fadeElements = document.querySelectorAll('.main__article, .main__travel-article, .main__form-contact, .main__list-question');
         flags = [];
     for (var i = 0; i < fadeElements.length; i++) {
         flags[i] = true;

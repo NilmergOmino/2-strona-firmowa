@@ -3,9 +3,10 @@ html{
 }
 body{
     height: 100%;
+    font-family: 'Oswald', sans-serif;
 }
 .header{
-    background: url('../img/background-planet.jpg') no-repeat fixed;
+    background: url('../img/background-planet.jpg') no-repeat fixed center;
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -32,7 +33,6 @@ body{
 .main{
     height: 500%;
     width: 100%;
-    /*background: -moz-linear-gradient(top, rgb(100, 11, 122) 0%, rgb(46, 129, 211) 75%);*/
 }
 .main__section{
     width: 100%;
@@ -52,7 +52,7 @@ body{
 }
 
 .main__section-contact{
-    background: url('../img/background-space-earth.jpg') no-repeat fixed;
+    background: url('../img/background-space-earth.jpg') no-repeat fixed center;
     background-size: cover;
 }
 .nav__ul{
@@ -69,11 +69,11 @@ body{
 }
 .nav__link{
     text-align: center;
-    padding-top: 10px;
+    padding-top: 5px;
     color: white;
     text-decoration: none;
     display: block;
-    height: 25px;
+    height: 30px;
     width: 100%;
 }
 .nav__link:hover{
@@ -88,10 +88,6 @@ body{
 @keyframes fade-in {
     0%{opacity: 0;}
     100%{opacity: 1;}
-}
-.fade-in-animation{
-    animation-name: fade-in;
-    animation-duration: 1s;
 }
 .header__heading{
     margin-top: 0;
@@ -336,12 +332,12 @@ body{
 }
 .main__section-contact-container{
     height: 100%;
-    width: 100%;
     background-color: rgba(0,0,0,0.4);
     margin: 0 auto;
     width: 70%;
 }
 .main__input, .main__textarea, .main__input-submit{
+    font-family: 'Oswald', sans-serif;
     padding: 5px;
     width: 50%;
     background-color: white;
@@ -411,4 +407,12 @@ body{
     float: right;
     padding: 5px;
     text-align: left;
+}
+@keyframes fade-in-up {
+    0%{opacity: 0; transform: translateY(15%);}
+    100%{opacity: 1;}
+}
+.fade-in-animation{
+    animation-name: fade-in-up;
+    animation-duration: 1s;
 }
