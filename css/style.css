@@ -21,6 +21,7 @@ body{
     transition: width 0.5s, left 0.5s, border-radius 0.5s;
 }
 .nav_sticky{
+    z-index: 100;
     border-radius: 0;
     position: fixed;
     top: 0;
@@ -87,6 +88,10 @@ body{
 @keyframes fade-in {
     0%{opacity: 0;}
     100%{opacity: 1;}
+}
+.fade-in-animation{
+    animation-name: fade-in;
+    animation-duration: 1s;
 }
 .header__heading{
     margin-top: 0;
