@@ -1,58 +1,3 @@
-@media (max-height: 530px) {
-    .main{
-        height: 600%;
-    }
-    .footer__section-info{
-        margin-bottom: 1%;
-    }
-}
-@media (max-height: 450px) {
-    .main{
-        height: 700%;
-    }
-    .footer{
-        height: 120%;
-    }
-}
-@media (max-height: 380px) {
-    .main{
-        height: 800%;
-    }
-    .footer{
-        height: 140%;
-    }
-}
-@media (max-height: 340px) {
-    .main{
-        height: 900%;
-    }
-    .footer{
-        height: 160%;
-    }
-}
-@media (max-height: 300px) {
-    .main{
-        height: 1000%;
-    }
-    .footer{
-        height: 180%;
-    }
-    .nav{
-        top: 60%;
-    }
-    .nav_sticky{
-        top: 0
-    }
-}
-@media (max-height: 270px) {
-    .main{
-        height: 1100%;
-    }
-    .footer{
-        height: 200%;
-    }
-}
-
 @media (max-width: 1350px){
     .main__travel-article{
         width: 55%;
@@ -61,6 +6,27 @@
 @media (max-width: 950px) {
     .main__travel-article{
         width: 65%;
+    }
+}
+@media (max-width: 900px) {
+    .header__link-logo{
+        position: absolute;
+        top: 10px;
+        left: 5px;
+    }
+    .header__logo{
+        height: 50px;
+        position: absolute;
+        top: 20px;
+        left: 5px;
+    }
+    .header{
+        background: url('../img/background-planet-small.jpg') no-repeat fixed center;
+        background-size: cover;
+    }
+    .main__section-contact{
+        background: url('../img/background-space-earth-small.jpg') no-repeat fixed center;
+        background-size: cover;
     }
 }
 @media (max-width: 850px) {
@@ -72,14 +38,8 @@
         margin: 0 auto;
         display: block;
     }
-    .main__section-about{
-        height: 24%;
-    }
 }
 @media (max-width: 650px) {
-    .main__section-about{
-        height: 26%;
-    }
     .main__list-question{
         width: 48%;
     }
@@ -88,7 +48,6 @@
     }
     .main__travel-article{
         width: 98%;
-        height: 22%;
     }
     .main__image-sphare_right{
         height: 60%;
@@ -111,7 +70,7 @@
         box-sizing: border-box;
     }
      .main__textarea{
-         height: 20%;
+         height: 100px;
      }
 }
 @media (max-width: 500px) {
@@ -122,5 +81,81 @@
     .nav_sticky{
         left: 0;
         width: 100%;
+    }
+}
+@media (max-width: 450px) {
+    .main__travel-article{
+        min-height: 350px;
+        margin: 100px auto;
+        width: 90%;
+    }
+    .main__travel-figure{
+        margin: 20px auto;
+        height: 150px;
+        width: 100%;
+        float: none;
+    }
+    .main__image-sphare_left, .main__image-sphare_right{
+        height: 100%;
+        display: block;
+        margin: 0 auto;
+        float: none;
+    }
+    .main__travel-description_right{
+        float: none;
+        margin: 0 auto;
+    }
+    .main__travel-description_left{
+        float: none;
+    }
+    .main__travel-description{
+        width: 95%;
+        margin: 0 auto;
+    }
+    .main__heading-travel-description{
+        margin-top: 0;
+        text-align: center;
+        font-size: 1.5em;
+    }
+    .footer__section-partners, .footer__section-links{
+        width: 70%;
+        display: inline-block;
+        text-align: center;
+        vertical-align: top;
+    }
+    .footer__list{
+        list-style-type: square;
+        width: 60%;
+        text-align: left;
+        float: right;
+    }
+}
+@media (max-width: 380px){
+    .main__heading-questions{
+        margin-bottom: 25px;
+    }
+    .main__list-question{
+        width: 90%;
+    }
+    .main__list-question-element{
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+    .main__question-article{
+        width: 85%;
+        margin-top: 10px;
+    }
+}
+@media (max-width: 300px) {
+    .header__link-logo{
+        position: absolute;
+        top: 80%;
+        left: 5px;
+    }
+    .header__logo{
+        height: 50px;
+        position: absolute;
+        top: 80%;
+        left: 5px;
     }
 }
