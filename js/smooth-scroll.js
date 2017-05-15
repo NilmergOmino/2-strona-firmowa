@@ -10,23 +10,21 @@ window.addEventListener('load', function(){
         navElement.onclick = function(){
             var speed = 2;
                 target = document.getElementById(this.hash.slice(1));
-                from = pageYOffset;
                 upto = target.offsetTop;
                 percentStart = 0;
                 history.pushState(null,null,this.hash);
             var scroll = function(){
-                var step = Math.round((upto - pageYOffset)*percentStart/1000);
+                var from = pageYOffset;
+                    step = Math.round((upto - from)*percentStart/1000);
                     step = Math.abs(step);
                     percentStart += speed;
                 if (step < 1) step = 1;
                 if (from < upto) {
                     window.scrollBy(0, step);
-                    from += step;
                     window.requestAnimationFrame(scroll);
                 }
                 else if(from > upto) {
                     window.scrollBy(0, -step);
-                    from -= step;
                     window.requestAnimationFrame(scroll);
                 }
             }
