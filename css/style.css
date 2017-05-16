@@ -45,8 +45,9 @@ body{
 .main__article-about{
     background-color: rgb(190, 203, 219);
 }
+/*rgb(62, 144, 216);*/
 .main__article-travels{
-    background-color: rgb(62, 144, 216);
+    background-color: rgb(32, 114, 186);
     padding-bottom: 150px;
 }
 .main__article-questions{
@@ -114,24 +115,24 @@ body{
 .header__link-logo{
     display: block;
     position: fixed;
-    top: 10px;
+    top: 30px;
     left: 10px;
 }
 .header__logo{
     height: 80px;
     position: fixed;
-    top: 30px;
+    top: 60px;
     left: 10px;
     transition: 0.3s;
 }
 .header__logo:hover{
-    transform: rotate(-45deg);
+    transform: scale(1.1,1.1);
 }
 .header__link-logo:focus{
     outline: none;
 }
 .header__link-logo:focus .header__logo{
-    transform: rotate(-45deg);
+    transform: scale(1.1,1.1);
 }
 .footer{
     min-height: 500px;
@@ -156,19 +157,19 @@ body{
 }
 .main__section{
     box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-    border: 1px solid rgba(32, 114, 186, 0.7);
+    border: 1px solid rgb(22, 104, 176);
     vertical-align: top;
     text-align: justify;
+    min-height: 250px;
     width: 24%;
     margin-right: 1%;
     display: inline-block;
     padding: 1%;
-    color: rgba(20, 20, 20, 0.9);
-    background-color: rgba(62, 144, 216, 0.9);
+    color: rgba(210, 210, 210, 0.95);
+    background-color: rgb(32, 114, 186);
 }
 .main__footer-social-media{
     margin-top: 5%;
-    color: rgba(32, 114, 186,0.9);
 }
 .main__social-media-list{
     list-style: none;
@@ -185,12 +186,12 @@ body{
     transition: 0.2s;
 }
 .main__favicon:hover{
-    color: rgb(5, 189, 158);
-    border-bottom: 1px solid rgb(5, 189, 158);
+    color: rgb(2, 84, 156);
+    border-bottom: 1px solid rgb(2, 84, 156);
 }
 .main__favicon:focus{
-    color: rgb(5, 189, 158);
-    border-bottom: 1px solid rgb(5, 189, 158);
+    color: rgb(2, 84, 156);
+    border-bottom: 1px solid rgb(2, 84, 156);
     outline: none;
 }
 .main__header-travel{
@@ -276,8 +277,8 @@ body{
     padding: 10px 5px 10px 5px;
     display: block;
     width: 80%;
-    background-color: rgba(62, 144, 216, 0.9);
-    border: 1px solid rgba(52, 134, 206, 0.9);
+    background-color: rgb(32, 114, 186);
+    border: 1px solid rgb(22, 104, 176);
     margin-bottom: 2px;
     transition: 0.2s;
     cursor: pointer;
@@ -286,9 +287,11 @@ body{
     margin-left: 5%;
 }
 .main__list-question-element:hover{
+    border: 1px solid rgba(72, 154, 226, 0.5);
     background-color: rgba(72, 154, 226, 0.7);
 }
 .main__list-question-element:focus{
+    border: 1px solid rgba(72, 154, 226, 0.5);
     background-color: rgba(72, 154, 226, 0.7);
     outline: none;
 }
