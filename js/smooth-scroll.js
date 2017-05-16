@@ -3,21 +3,26 @@
 //  upto = target.offsetTop; --> jeżeli chcesz by obraz przesunął się ponad/poniżej kotwicy, dodaj/odejmij tu stosowną wartość (ilość pikseli). Np. by przyklejane menu nie przykryło celu to możesz odjąć wysokość menu)
 //  percentStart = 0; --> początkowa zmiana, im ta zmienna jest większa, tym większy jest pierwszy przeskok, niska wartość daje łagodniejszy start
 
-window.addEventListener('load', function(){
-    var navElements = document.getElementsByClassName('nav__link');
-    for(var i=0;i<navElements.length; i++){
+window.addEventListener('DOMContentLoaded', function(){
+    var navElements = document.getElementsByClassName('nav__link'),
+        navElementsAmount = navElements.length;
+    for(var i=0;i< navElementsAmount; i++){
         var navElement = navElements[i];
-        navElement.onclick = function(){
-            var speed = 2;
-                target = document.getElementById(this.hash.slice(1));
-                upto = target.offsetTop;
-                percentStart = 0;
-                history.pushState(null,null,this.hash);
+        navElement.addEventListener('click', function(event){
+            var clickedElement = event.target,
+                speed = 2;
+                target = document.getElementById(clickedElement.hash.slice(1)),
+                upto = target.offsetTop,
+                percentStart = 0,
+                pageHeight = document.documentElement.scrollHeight,
+                viewHeight = document.documentElement.clientHeight;
+                if(upto + viewHeight >= pageHeight) upto = pageHeight - viewHeight;
+            history.pushState(null,null,clickedElement.hash);
             var scroll = function(){
-                var from = pageYOffset;
-                    step = Math.round((upto - from)*percentStart/1000);
+                var from = pageYOffset,
+                    step = Math.round((upto - from)*percentStart/1000),
                     step = Math.abs(step);
-                    percentStart += speed;
+                percentStart += speed;
                 if (step < 1) step = 1;
                 if (from < upto) {
                     window.scrollBy(0, step);
@@ -29,7 +34,7 @@ window.addEventListener('load', function(){
                 }
             }
             window.requestAnimationFrame(scroll);
-            return false;
-        }
+            event.preventDefault();
+        })
     }
 })

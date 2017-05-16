@@ -1,9 +1,10 @@
 // toggle artykułów w sekcji pytań i odpowiedzi
-window.addEventListener('load', function(){
-    var listButtons = document.getElementsByClassName('main__list-question-element');
-        articles = document.getElementsByClassName('main__question-article');
+window.addEventListener('DOMContentLoaded', function(){
+    var listButtons = document.getElementsByClassName('main__list-question-element'),
+        articles = document.getElementsByClassName('main__question-article'),
+        listButtonsAmount = listButtons.length;
     function toggleButton(element) {
-        var activeButton = document.getElementsByClassName('main__list-question-element_active');
+        var activeButton = document.getElementsByClassName('main__list-question-element_active'),
             articleVisible = document.getElementsByClassName('main__question-article_visible');
         if (element.getAttribute("aria-pressed") === "false") {
             activeButton[0].setAttribute("aria-pressed", "false");
@@ -12,7 +13,7 @@ window.addEventListener('load', function(){
             element.setAttribute("aria-pressed", "true");
             element.setAttribute("aria-expanded", "true");
             element.classList.add('main__list-question-element_active');
-            for (var j = 0; j < listButtons.length; j++) {
+            for (var j = 0; j < listButtonsAmount; j++) {
                 if (listButtons[j] === element ) {
                     articleVisible[0].classList.toggle('main__question-article_hidden');
                     articleVisible[0].classList.toggle('main__question-article_visible');
@@ -22,15 +23,10 @@ window.addEventListener('load', function(){
             }
         }
     }
-    for(var i=0; i<listButtons.length; i++){
+    for(var i=0; i<listButtonsAmount; i++){
         var activatedButton = listButtons[i];
-        activatedButton.onclick = function(event){
+        activatedButton.addEventListener('click', function(event){
             toggleButton(event.target);
-        }
-        activatedButton.onkeypress = function(event){
-            if (event.keyCode === 32 || event.keyCode === 13) {
-              toggleButton(event.target);
-            }
-        }
+        }, false)
     }
 })
